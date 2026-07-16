@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; }
+  ::-webkit-scrollbar { width: 0; height: 0; }
+</style>
+</helmet>
+
+<!-- ============ IDENTITY BOARD ============ -->
+<div style="position:absolute;left:80px;top:80px;width:1600px">
+  <div data-drags-parent="1" style="position:absolute;top:-30px;font:600 13px 'DM Sans',sans-serif;letter-spacing:.04em;color:#8A7B6B;text-transform:uppercase">Identidade visual</div>
+  <div style="background:#fff;border-radius:14px;box-shadow:0 1px 3px rgba(0,0,0,.08);overflow:hidden;font-family:'DM Sans',sans-serif">
+    <!-- brand strip -->
+    <div style="display:flex;align-items:center;gap:28px;padding:38px 44px;background:linear-gradient(115deg,#F5402C 0%,#FF6A3D 60%,#FF8A3D 100%)">
+      <div style="width:78px;height:78px;border-radius:22px;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(0,0,0,.18)">
+        <span style="font-family:'Fredoka',sans-serif;font-weight:700;font-size:40px;color:#F5402C">m</span>
+      </div>
+      <div>
+        <div style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:44px;color:#fff;line-height:1">manda<span style="color:#FFD23E">aí</span></div>
+        <div style="font-size:15px;color:rgba(255,255,255,.92);margin-top:6px;font-weight:500">comida boa, do seu bairro, na sua porta</div>
+      </div>
+      <div style="margin-left:auto;text-align:right;color:#fff">
+        <div style="font-family:'Fredoka',sans-serif;font-size:15px;font-weight:500;opacity:.9">Tom de voz</div>
+        <div style="font-size:14px;opacity:.85;max-width:300px;margin-top:4px">Próximo, brasileiro e direto. "Manda aí que a gente entrega."</div>
+      </div>
+    </div>
+    <!-- system rows -->
+    <div style="display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:0">
+      <!-- colors -->
+      <div style="padding:30px 36px;border-right:1px solid #F0E9E1">
+        <div style="font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#A89A8A;margin-bottom:18px">Paleta</div>
+        <div style="display:flex;flex-wrap:wrap;gap:14px">
+          <div style="text-align:center">
+            <div style="width:84px;height:64px;border-radius:12px;background:#F5402C"></div>
+            <div style="font-size:11px;color:#5C5249;margin-top:7px;font-weight:600">Coral</div>
+            <div style="font-size:10px;color:#A89A8A;font-family:monospace">#F5402C</div>
+          </div>
+          <div style="text-align:center">
+            <div style="width:84px;height:64px;border-radius:12px;background:#FFC02E"></div>
+            <div style="font-size:11px;color:#5C5249;margin-top:7px;font-weight:600">Sol</div>
+            <div style="font-size:10px;color:#A89A8A;font-family:monospace">#FFC02E</div>
+          </div>
+          <div style="text-align:center">
+            <div style="width:84px;height:64px;border-radius:12px;background:#1FA463"></div>
+            <div style="font-size:11px;color:#5C5249;margin-top:7px;font-weight:600">Folha</div>
+            <div style="font-size:10px;color:#A89A8A;font-family:monospace">#1FA463</div>
+          </div>
+          <div style="text-align:center">
+            <div style="width:84px;height:64px;border-radius:12px;background:#2A2320"></div>
+            <div style="font-size:11px;color:#5C5249;margin-top:7px;font-weight:600">Tinta</div>
+            <div style="font-size:10px;color:#A89A8A;font-family:monospace">#2A2320</div>
+          </div>
+          <div style="text-align:center">
+            <div style="width:84px;height:64px;border-radius:12px;background:#FBF7F2;border:1px solid #EFE7DD"></div>
+            <div style="font-size:11px;color:#5C5249;margin-top:7px;font-weight:600">Creme</div>
+            <div style="font-size:10px;color:#A89A8A;font-family:monospace">#FBF7F2</div>
+          </div>
+        </div>
+      </div>
+      <!-- type -->
+      <div style="padding:30px 36px;border-right:1px solid #F0E9E1">
+        <div style="font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#A89A8A;margin-bottom:18px">Tipografia</div>
+        <div style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:34px;color:#2A2320;line-height:1.1">Fredoka</div>
+        <div style="font-size:12px;color:#A89A8A;margin-bottom:18px">Display · logo, títulos &amp; preços</div>
+        <div style="font-family:'DM Sans',sans-serif;font-weight:600;font-size:22px;color:#2A2320">DM Sans</div>
+        <div style="font-size:13px;color:#5C5249;margin-top:4px;line-height:1.5">Texto de interface, descrições e botões. Aa Bb Cc 123 — açaí, pão de queijo, coxinha.</div>
+      </div>
+      <!-- components -->
+      <div style="padding:30px 36px">
+        <div style="font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#A89A8A;margin-bottom:18px">Componentes</div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+          <div style="background:#F5402C;color:#fff;font-weight:600;font-size:14px;padding:12px 22px;border-radius:999px">Pedir agora</div>
+          <div style="background:#fff;color:#2A2320;font-weight:600;font-size:14px;padding:11px 20px;border-radius:999px;border:1.5px solid #E3D9CD">Ver cardápio</div>
+          <div style="background:#1FA463;color:#fff;font-weight:600;font-size:13px;padding:7px 14px;border-radius:999px">Grátis</div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:16px">
+          <div style="display:flex;align-items:center;gap:6px;background:#FFF3E0;color:#C24A1E;font-weight:600;font-size:12px;padding:7px 12px;border-radius:999px">★ 4,8</div>
+          <div style="background:#FCEEEA;color:#F5402C;font-weight:600;font-size:12px;padding:7px 12px;border-radius:999px">Promo −30%</div>
+          <div style="background:#F1F8F0;color:#1FA463;font-weight:600;font-size:12px;padding:7px 12px;border-radius:999px">Entrega 25 min</div>
+        </div>
+        <div style="margin-top:16px;display:flex;gap:10px">
+          <div style="width:46px;height:46px;border-radius:14px;background:#FFE3D6;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;color:#F5402C">L</div>
+          <div style="width:46px;height:46px;border-radius:14px;background:#FFEFC9;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;color:#C9971A">P</div>
+          <div style="width:46px;height:46px;border-radius:14px;background:#E7F0DD;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;color:#1FA463">A</div>
+          <div style="width:46px;height:46px;border-radius:14px;background:#E6ECF5;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;color:#3E6DB5">J</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HOME ============ -->
+<div data-drags-parent="0" style="position:absolute;left:80px;top:840px;font:600 13px 'DM Sans',sans-serif;letter-spacing:.04em;color:#8A7B6B;text-transform:uppercase">01 · Home / Vitrine</div>
+
+<!-- Home Desktop -->
+<div style="position:absolute;left:80px;top:880px;width:1200px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;font:500 12px 'DM Sans',sans-serif;color:#A89A8A">Desktop · 1200px</div>
+  <div data-screen-label="Home Desktop" style="background:#FBF7F2;border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,.08);overflow:hidden;font-family:'DM Sans',sans-serif">
+    <!-- nav -->
+    <div style="display:flex;align-items:center;gap:22px;padding:16px 30px;background:#fff;border-bottom:1px solid #F0E9E1">
+      <div style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:25px;color:#2A2320">manda<span style="color:#F5402C">aí</span></div>
+      <div style="display:flex;align-items:center;gap:9px;background:#FBF7F2;border:1px solid #EFE7DD;border-radius:10px;padding:9px 14px;max-width:280px">
+        <div style="width:8px;height:8px;border-radius:999px;background:#F5402C;flex-shrink:0"></div>
+        <div style="overflow:hidden"><div style="font-size:11px;color:#A89A8A">Entregar em</div><div style="font-size:13px;font-weight:600;color:#2A2320;white-space:nowrap">Rua das Palmeiras, 240 ▾</div></div>
+      </div>
+      <div style="flex:1;display:flex;align-items:center;gap:10px;background:#FBF7F2;border:1px solid #EFE7DD;border-radius:10px;padding:11px 16px">
+        <span style="color:#B7A998;font-size:15px">⌕</span>
+        <span style="color:#A89A8A;font-size:14px">Buscar pratos, lojas e cozinhas…</span>
+      </div>
+      <div style="font-size:14px;font-weight:600;color:#2A2320;cursor:pointer">Entrar</div>
+      <div style="display:flex;align-items:center;gap:8px;background:#F5402C;color:#fff;padding:11px 18px;border-radius:999px;font-weight:600;font-size:14px">Sacola · 2</div>
+    </div>
+
+    <!-- hero -->
+    <div style="padding:26px 30px 6px">
+      <div style="display:flex;gap:18px">
+        <div style="flex:1.6;border-radius:18px;padding:34px 36px;background:linear-gradient(120deg,#F5402C,#FF7A3D);color:#fff;position:relative;overflow:hidden">
+          <div style="font-size:13px;font-weight:600;opacity:.9;letter-spacing:.03em">FRETE GRÁTIS NO PRIMEIRO PEDIDO</div>
+          <div style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:34px;line-height:1.1;margin-top:10px;max-width:380px">Bateu a fome? Manda aí 🙌</div>
+          <div style="font-size:14px;opacity:.92;margin-top:8px;max-width:360px">Mais de 1.200 lojas do seu bairro, prontas pra entregar agora.</div>
+          <div style="display:inline-flex;margin-top:18px;background:#fff;color:#F5402C;font-weight:700;font-size:14px;padding:12px 24px;border-radius:999px">Explorar lojas</div>
+          <div style="position:absolute;right:-30px;bottom:-40px;width:200px;height:200px;border-radius:999px;background:rgba(255,255,255,.12)"></div>
+        </div>
+        <div style="flex:1;border-radius:18px;padding:28px;background:#fff;border:1px solid #F0E9E1;display:flex;flex-direction:column;justify-content:center">
+          <div style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:20px;color:#2A2320">Clube Mandaaí</div>
+          <div style="font-size:13px;color:#7A6E62;margin-top:6px;line-height:1.5">Entregas grátis ilimitadas e cupons exclusivos por R$ 9,90/mês.</div>
+          <div style="display:inline-flex;align-self:flex-start;margin-top:16px;border:1.5px solid #FFC02E;color:#C9971A;font-weight:600;font-size:13px;padding:10px 18px;border-radius:999px">Quero ser do clube</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- categories -->
+    <div style="padding:24px 30px 8px">
+      <div style="display:flex;gap:14px;overflow:hidden">
+        <sc-for list="{{ categories }}" as="c" hint-placeholder-count="9">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:9px;min-width:78px">
+            <div style="width:64px;height:64px;border-radius:18px;background:{{ c.bg }};display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;font-size:22px;color:{{ c.fg }}">{{ c.ini }}</div>
+            <div style="font-size:12.5px;font-weight:600;color:#4A4138">{{ c.label }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+
+    <!-- section -->
+    <div style="padding:18px 30px 36px">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px">
+        <div style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:23px;color:#2A2320">Perto de você</div>
+        <div style="font-size:13px;font-weight:600;color:#F5402C">Ver tudo →</div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px">
+        <sc-for list="{{ restaurants }}" as="r" hint-placeholder-count="6">
+          <div style="background:#fff;border:1px solid #F0E9E1;border-radius:16px;overflow:hidden">
+            <div style="height:130px;background:{{ r.tint }};position:relative;display:flex;align-items:flex-end;padding:10px">
+              <div style="position:absolute;top:10px;left:10px;background:rgba(255,255,255,.92);color:#C24A1E;font-weight:700;font-size:11px;padding:5px 10px;border-radius:999px">{{ r.tag }}</div>
+              <div style="font-family:monospace;font-size:10px;color:rgba(0,0,0,.28)">{{ r.imglabel }}</div>
+            </div>
+            <div style="padding:14px 16px">
+              <div style="display:flex;align-items:center;gap:8px">
+                <div style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:16px;color:#2A2320">{{ r.name }}</div>
+              </div>
+              <div style="font-size:12.5px;color:#8A7B6B;margin-top:3px">{{ r.cat }}</div>
+              <div style="display:flex;align-items:center;gap:12px;margin-top:11px;font-size:12.5px">
+                <span style="color:#C9971A;font-weight:700">★ {{ r.rating }}</span>
+                <span style="color:#7A6E62">{{ r.time }}</span>
+                <span style="color:#1FA463;font-weight:600">{{ r.fee }}</span>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Home Mobile -->
+<div style="position:absolute;left:1340px;top:880px;width:340px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;font:500 12px 'DM Sans',sans-serif;color:#A89A8A">Mobile · 360px</div>
+  <div data-screen-label="Home Mobile" style="background:#FBF7F2;border-radius:30px;box-shadow:0 8px 30px rgba(0,0,0,.12);overflow:hidden;font-family:'DM Sans',sans-serif;border:8px solid #2A2320">
+    <div style="height:26px;background:#fff;display:flex;align-items:center;justify-content:center"><div style="width:90px;height:5px;border-radius:999px;background:#2A2320;opacity:.18"></div></div>
+    <!-- top -->
+    <div style="background:#fff;padding:10px 16px 14px">
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <div style="display:flex;align-items:center;gap:6px"><div style="width:7px;height:7px;border-radius:999px;background:#F5402C"></div><div><div style="font-size:10px;color:#A89A8A">Entregar em</div><div style="font-size:12.5px;font-weight:600;color:#2A2320">Rua das Palmeiras ▾</div></div></div>
+        <div style="font-family:'Fredoka';font-weight:600;font-size:18px;color:#2A2320">manda<span style="color:#F5402C">aí</span></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:9px;background:#FBF7F2;border:1px solid #EFE7DD;border-radius:10px;padding:10px 13px;margin-top:12px"><span style="color:#B7A998">⌕</span><span style="color:#A89A8A;font-size:13px">Buscar no Mandaaí…</span></div>
+    </div>
+    <!-- hero -->
+    <div style="padding:14px 16px 4px">
+      <div style="border-radius:16px;padding:20px;background:linear-gradient(120deg,#F5402C,#FF7A3D);color:#fff">
+        <div style="font-size:10.5px;font-weight:700;opacity:.9">FRETE GRÁTIS HOJE</div>
+        <div style="font-family:'Fredoka';font-weight:600;font-size:21px;margin-top:6px;line-height:1.15">Bateu a fome? Manda aí 🙌</div>
+        <div style="display:inline-flex;margin-top:12px;background:#fff;color:#F5402C;font-weight:700;font-size:12px;padding:9px 16px;border-radius:999px">Explorar lojas</div>
+      </div>
+    </div>
+    <!-- cats -->
+    <div style="padding:14px 16px 6px;display:flex;gap:12px;overflow:hidden">
+      <sc-for list="{{ catsMobile }}" as="c" hint-placeholder-count="4">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:6px;min-width:58px">
+          <div style="width:52px;height:52px;border-radius:15px;background:{{ c.bg }};display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;font-size:18px;color:{{ c.fg }}">{{ c.ini }}</div>
+          <div style="font-size:11px;font-weight:600;color:#4A4138">{{ c.label }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <!-- list -->
+    <div style="padding:8px 16px 16px">
+      <div style="font-family:'Fredoka';font-weight:600;font-size:18px;color:#2A2320;margin:6px 0 12px">Perto de você</div>
+      <sc-for list="{{ restaurantsMobile }}" as="r" hint-placeholder-count="3">
+        <div style="background:#fff;border:1px solid #F0E9E1;border-radius:16px;overflow:hidden;margin-bottom:12px">
+          <div style="height:110px;background:{{ r.tint }};position:relative">
+            <div style="position:absolute;top:9px;left:9px;background:rgba(255,255,255,.92);color:#C24A1E;font-weight:700;font-size:10px;padding:4px 9px;border-radius:999px">{{ r.tag }}</div>
+          </div>
+          <div style="padding:12px 14px">
+            <div style="font-family:'Fredoka';font-weight:600;font-size:15px;color:#2A2320">{{ r.name }}</div>
+            <div style="font-size:11.5px;color:#8A7B6B;margin-top:2px">{{ r.cat }}</div>
+            <div style="display:flex;align-items:center;gap:11px;margin-top:9px;font-size:11.5px"><span style="color:#C9971A;font-weight:700">★ {{ r.rating }}</span><span style="color:#7A6E62">{{ r.time }}</span><span style="color:#1FA463;font-weight:600">{{ r.fee }}</span></div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <!-- tabbar -->
+    <div style="display:flex;justify-content:space-around;padding:12px 0 16px;background:#fff;border-top:1px solid #F0E9E1">
+      <div style="font-size:11px;font-weight:600;color:#F5402C;text-align:center">⌂<div>Início</div></div>
+      <div style="font-size:11px;color:#A89A8A;text-align:center">⌕<div>Buscar</div></div>
+      <div style="font-size:11px;color:#A89A8A;text-align:center">♡<div>Favoritos</div></div>
+      <div style="font-size:11px;color:#A89A8A;text-align:center">≡<div>Pedidos</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ RESTAURANT / MENU ============ -->
+<div data-drags-parent="0" style="position:absolute;left:80px;top:2640px;font:600 13px 'DM Sans',sans-serif;letter-spacing:.04em;color:#8A7B6B;text-transform:uppercase">02 · Restaurante + Cardápio</div>
+
+<!-- Restaurant Desktop -->
+<div style="position:absolute;left:80px;top:2680px;width:1200px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;font:500 12px 'DM Sans',sans-serif;color:#A89A8A">Desktop · 1200px</div>
+  <div data-screen-label="Restaurante Desktop" style="background:#FBF7F2;border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,.08);overflow:hidden;font-family:'DM Sans',sans-serif">
+    <!-- nav -->
+    <div style="display:flex;align-items:center;gap:22px;padding:14px 30px;background:#fff;border-bottom:1px solid #F0E9E1">
+      <div style="font-family:'Fredoka';font-weight:600;font-size:23px;color:#2A2320">manda<span style="color:#F5402C">aí</span></div>
+      <div style="font-size:13px;color:#8A7B6B">‹ Voltar para a vitrine</div>
+      <div style="margin-left:auto;display:flex;align-items:center;gap:8px;background:#F5402C;color:#fff;padding:10px 16px;border-radius:999px;font-weight:600;font-size:13px">Sacola · R$ 65,40</div>
+    </div>
+    <!-- cover -->
+    <div style="height:170px;background:linear-gradient(120deg,#FFE3D6,#FFCDB8);position:relative">
+      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;color:rgba(0,0,0,.22)">imagem de capa do restaurante</div>
+      <div style="position:absolute;top:14px;right:18px;background:rgba(255,255,255,.9);width:38px;height:38px;border-radius:999px;display:flex;align-items:center;justify-content:center;color:#F5402C">♡</div>
+    </div>
+    <!-- header card -->
+    <div style="background:#fff;padding:20px 30px;border-bottom:1px solid #F0E9E1;display:flex;align-items:center;gap:18px">
+      <div style="width:74px;height:74px;border-radius:18px;background:#FFE3D6;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:700;font-size:30px;color:#F5402C;margin-top:-44px;border:4px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.1)">T</div>
+      <div style="flex:1">
+        <div style="font-family:'Fredoka';font-weight:600;font-size:26px;color:#2A2320">Tonho Lanches</div>
+        <div style="font-size:13px;color:#8A7B6B;margin-top:2px">Hambúrguer • Lanches • R$ 1,80 / km</div>
+        <div style="display:flex;align-items:center;gap:14px;margin-top:10px;font-size:13px">
+          <span style="background:#FFF3E0;color:#C24A1E;font-weight:700;padding:5px 11px;border-radius:999px">★ 4,8 <span style="font-weight:500;opacity:.7">(1,2 mil)</span></span>
+          <span style="color:#7A6E62">⏱ 25–35 min</span>
+          <span style="color:#1FA463;font-weight:600">Entrega grátis</span>
+          <span style="color:#7A6E62">Mín. R$ 20,00</span>
+        </div>
+      </div>
+    </div>
+    <!-- tabs -->
+    <div style="background:#fff;padding:0 30px;border-bottom:1px solid #F0E9E1;display:flex;gap:26px">
+      <div style="padding:14px 0;font-weight:700;font-size:14px;color:#F5402C;border-bottom:2.5px solid #F5402C">Mais pedidos</div>
+      <div style="padding:14px 0;font-weight:500;font-size:14px;color:#8A7B6B">Lanches</div>
+      <div style="padding:14px 0;font-weight:500;font-size:14px;color:#8A7B6B">Acompanhamentos</div>
+      <div style="padding:14px 0;font-weight:500;font-size:14px;color:#8A7B6B">Bebidas</div>
+      <div style="padding:14px 0;font-weight:500;font-size:14px;color:#8A7B6B">Sobremesas</div>
+    </div>
+    <!-- body: menu + cart -->
+    <div style="display:flex;gap:24px;padding:24px 30px 32px;align-items:flex-start">
+      <div style="flex:1.7">
+        <div style="font-family:'Fredoka';font-weight:600;font-size:20px;color:#2A2320;margin-bottom:14px">🔥 Mais pedidos</div>
+        <sc-for list="{{ menuPopulares }}" as="m" hint-placeholder-count="3">
+          <div style="background:#fff;border:1px solid #F0E9E1;border-radius:14px;padding:16px;display:flex;gap:16px;margin-bottom:12px;align-items:center">
+            <div style="flex:1">
+              <div style="font-family:'Fredoka';font-weight:600;font-size:16px;color:#2A2320">{{ m.name }}</div>
+              <div style="font-size:13px;color:#8A7B6B;margin-top:5px;line-height:1.5;max-width:430px">{{ m.desc }}</div>
+              <div style="font-family:'Fredoka';font-weight:600;font-size:16px;color:#2A2320;margin-top:10px">{{ m.price }}</div>
+            </div>
+            <div style="width:104px;height:104px;border-radius:14px;background:{{ m.tint }};position:relative;flex-shrink:0">
+              <div style="position:absolute;bottom:8px;right:8px;width:34px;height:34px;border-radius:999px;background:#F5402C;color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:600;box-shadow:0 3px 8px rgba(245,64,44,.4)">+</div>
+            </div>
+          </div>
+        </sc-for>
+        <div style="font-family:'Fredoka';font-weight:600;font-size:20px;color:#2A2320;margin:22px 0 14px">Acompanhamentos</div>
+        <sc-for list="{{ menuAcomp }}" as="m" hint-placeholder-count="2">
+          <div style="background:#fff;border:1px solid #F0E9E1;border-radius:14px;padding:16px;display:flex;gap:16px;margin-bottom:12px;align-items:center">
+            <div style="flex:1">
+              <div style="font-family:'Fredoka';font-weight:600;font-size:16px;color:#2A2320">{{ m.name }}</div>
+              <div style="font-size:13px;color:#8A7B6B;margin-top:5px;line-height:1.5;max-width:430px">{{ m.desc }}</div>
+              <div style="font-family:'Fredoka';font-weight:600;font-size:16px;color:#2A2320;margin-top:10px">{{ m.price }}</div>
+            </div>
+            <div style="width:104px;height:104px;border-radius:14px;background:{{ m.tint }};position:relative;flex-shrink:0">
+              <div style="position:absolute;bottom:8px;right:8px;width:34px;height:34px;border-radius:999px;background:#F5402C;color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:600;box-shadow:0 3px 8px rgba(245,64,44,.4)">+</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+      <!-- cart sidebar -->
+      <div style="width:300px;flex-shrink:0;background:#fff;border:1px solid #F0E9E1;border-radius:16px;padding:20px;position:sticky;top:20px">
+        <div style="font-family:'Fredoka';font-weight:600;font-size:18px;color:#2A2320;margin-bottom:14px">Sua sacola</div>
+        <div style="display:flex;align-items:center;gap:12px;padding-bottom:14px;border-bottom:1px solid #F0E9E1">
+          <div style="width:40px;height:40px;border-radius:10px;background:#FFE3D6;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:700;color:#F5402C;font-size:13px">1×</div>
+          <div style="flex:1;font-size:13px;font-weight:600;color:#2A2320">X-Tudo da Casa</div>
+          <div style="font-size:13px;color:#2A2320;font-weight:600">R$ 32,90</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid #F0E9E1">
+          <div style="width:40px;height:40px;border-radius:10px;background:#FFEFC9;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:700;color:#C9971A;font-size:13px">1×</div>
+          <div style="flex:1;font-size:13px;font-weight:600;color:#2A2320">Batata Rústica</div>
+          <div style="font-size:13px;color:#2A2320;font-weight:600">R$ 18,90</div>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:16px;font-size:14px;color:#7A6E62"><span>Subtotal</span><span style="color:#2A2320;font-weight:700;font-family:'Fredoka'">R$ 51,80</span></div>
+        <div style="margin-top:16px;background:#F5402C;color:#fff;text-align:center;font-weight:700;font-size:15px;padding:14px;border-radius:12px">Ir para a sacola</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Restaurant Mobile -->
+<div style="position:absolute;left:1340px;top:2680px;width:340px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;font:500 12px 'DM Sans',sans-serif;color:#A89A8A">Mobile · 360px</div>
+  <div data-screen-label="Restaurante Mobile" style="background:#FBF7F2;border-radius:30px;box-shadow:0 8px 30px rgba(0,0,0,.12);overflow:hidden;font-family:'DM Sans',sans-serif;border:8px solid #2A2320">
+    <div style="height:150px;background:linear-gradient(120deg,#FFE3D6,#FFCDB8);position:relative">
+      <div style="position:absolute;top:14px;left:14px;width:34px;height:34px;border-radius:999px;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;color:#2A2320">‹</div>
+      <div style="position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:999px;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;color:#F5402C">♡</div>
+    </div>
+    <div style="background:#fff;padding:14px 16px 16px">
+      <div style="display:flex;gap:12px;align-items:flex-start">
+        <div style="width:54px;height:54px;border-radius:14px;background:#FFE3D6;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:700;font-size:22px;color:#F5402C;margin-top:-40px;border:3px solid #fff">T</div>
+        <div><div style="font-family:'Fredoka';font-weight:600;font-size:19px;color:#2A2320">Tonho Lanches</div><div style="font-size:11.5px;color:#8A7B6B">Hambúrguer • Lanches</div></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;margin-top:12px;font-size:11.5px">
+        <span style="background:#FFF3E0;color:#C24A1E;font-weight:700;padding:4px 9px;border-radius:999px">★ 4,8</span>
+        <span style="color:#7A6E62">25–35 min</span>
+        <span style="color:#1FA463;font-weight:600">Grátis</span>
+      </div>
+    </div>
+    <div style="background:#fff;padding:0 16px;display:flex;gap:18px;border-bottom:1px solid #F0E9E1;overflow:hidden">
+      <div style="padding:11px 0;font-weight:700;font-size:12.5px;color:#F5402C;border-bottom:2px solid #F5402C;white-space:nowrap">Mais pedidos</div>
+      <div style="padding:11px 0;font-weight:500;font-size:12.5px;color:#8A7B6B;white-space:nowrap">Lanches</div>
+      <div style="padding:11px 0;font-weight:500;font-size:12.5px;color:#8A7B6B;white-space:nowrap">Bebidas</div>
+    </div>
+    <div style="padding:14px 16px 8px">
+      <div style="font-family:'Fredoka';font-weight:600;font-size:15px;color:#2A2320;margin-bottom:10px">🔥 Mais pedidos</div>
+      <sc-for list="{{ menuPopulares }}" as="m" hint-placeholder-count="3">
+        <div style="background:#fff;border:1px solid #F0E9E1;border-radius:14px;padding:12px;display:flex;gap:12px;margin-bottom:10px">
+          <div style="flex:1"><div style="font-family:'Fredoka';font-weight:600;font-size:14px;color:#2A2320">{{ m.name }}</div><div style="font-size:11.5px;color:#8A7B6B;margin-top:4px;line-height:1.4">{{ m.desc }}</div><div style="font-family:'Fredoka';font-weight:600;font-size:14px;color:#2A2320;margin-top:8px">{{ m.price }}</div></div>
+          <div style="width:78px;height:78px;border-radius:12px;background:{{ m.tint }};position:relative;flex-shrink:0"><div style="position:absolute;bottom:6px;right:6px;width:28px;height:28px;border-radius:999px;background:#F5402C;color:#fff;display:flex;align-items:center;justify-content:center;font-size:17px">+</div></div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="padding:12px 16px 18px;background:#fff;border-top:1px solid #F0E9E1">
+      <div style="background:#F5402C;color:#fff;text-align:center;font-weight:700;font-size:14px;padding:13px;border-radius:12px;display:flex;align-items:center;justify-content:space-between;padding-left:18px;padding-right:18px"><span>Ver sacola · 2 itens</span><span>R$ 51,80</span></div>
+    </div>
+  </div>
+</div>
+<!-- ============ PRODUCT DETAIL ============ -->
+<div data-drags-parent="0" style="position:absolute;left:80px;top:4140px;font:600 13px 'DM Sans',sans-serif;letter-spacing:.04em;color:#8A7B6B;text-transform:uppercase">03 · Detalhe do produto</div>
+
+<!-- Product Desktop (modal style) -->
+<div style="position:absolute;left:80px;top:4180px;width:1200px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;font:500 12px 'DM Sans',sans-serif;color:#A89A8A">Desktop · modal sobre o cardápio</div>
+  <div data-screen-label="Produto Desktop" style="background:#EAE2D6;border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,.08);overflow:hidden;font-family:'DM Sans',sans-serif;padding:40px;display:flex;align-items:center;justify-content:center">
+    <div style="width:760px;background:#fff;border-radius:18px;overflow:hidden;display:flex;box-shadow:0 20px 50px rgba(0,0,0,.18)">
+      <div style="width:300px;background:#FFE3D6;position:relative;flex-shrink:0">
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;color:rgba(0,0,0,.25)">foto do prato</div>
+        <div style="position:absolute;top:14px;left:14px;width:34px;height:34px;border-radius:999px;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;color:#2A2320">✕</div>
+      </div>
+      <div style="flex:1;padding:26px 28px;max-height:560px;overflow:hidden;display:flex;flex-direction:column">
+        <div style="font-family:'Fredoka';font-weight:600;font-size:24px;color:#2A2320">X-Tudo da Casa</div>
+        <div style="font-size:13.5px;color:#7A6E62;margin-top:6px;line-height:1.55">Pão brioche artesanal, 2 hambúrgueres de 150g no ponto, cheddar cremoso, bacon crocante, ovo, alface e tomate. O clássico que todo mundo pede.</div>
+        <div style="font-family:'Fredoka';font-weight:600;font-size:20px;color:#2A2320;margin-top:14px">R$ 32,90</div>
+
+        <div style="margin-top:20px">
+          <div style="display:flex;align-items:center;justify-content:space-between"><div style="font-weight:700;font-size:14px;color:#2A2320">Ponto da carne</div><div style="font-size:11px;color:#fff;background:#F5402C;padding:3px 9px;border-radius:999px;font-weight:600">Obrigatório</div></div>
+          <div style="margin-top:10px;display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;align-items:center;justify-content:space-between;border:1px solid #F0E9E1;border-radius:10px;padding:11px 14px"><span style="font-size:13.5px;color:#2A2320">Ao ponto</span><div style="width:18px;height:18px;border-radius:999px;border:5px solid #F5402C;box-shadow:inset 0 0 0 2px #fff"></div></div>
+            <div style="display:flex;align-items:center;justify-content:space-between;border:1px solid #F0E9E1;border-radius:10px;padding:11px 14px"><span style="font-size:13.5px;color:#2A2320">Bem passado</span><div style="width:18px;height:18px;border-radius:999px;border:2px solid #D9CEC0"></div></div>
+          </div>
+        </div>
+
+        <div style="margin-top:18px">
+          <div style="font-weight:700;font-size:14px;color:#2A2320">Adicionais <span style="font-weight:400;color:#A89A8A">· opcional</span></div>
+          <div style="margin-top:10px;display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;align-items:center;justify-content:space-between;border:1px solid #F0E9E1;border-radius:10px;padding:11px 14px"><span style="font-size:13.5px;color:#2A2320">Bacon extra <span style="color:#1FA463;font-weight:600">+R$ 5,00</span></span><div style="width:18px;height:18px;border-radius:6px;background:#F5402C;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px">✓</div></div>
+            <div style="display:flex;align-items:center;justify-content:space-between;border:1px solid #F0E9E1;border-radius:10px;padding:11px 14px"><span style="font-size:13.5px;color:#2A2320">Cheddar duplo <span style="color:#1FA463;font-weight:600">+R$ 4,00</span></span><div style="width:18px;height:18px;border-radius:6px;border:2px solid #D9CEC0"></div></div>
+          </div>
+        </div>
+
+        <div style="margin-top:18px;display:flex;align-items:center;gap:14px">
+          <div style="display:flex;align-items:center;gap:16px;border:1px solid #E3D9CD;border-radius:999px;padding:8px 16px">
+            <span style="font-size:20px;color:#A89A8A">−</span><span style="font-weight:700;color:#2A2320;font-size:15px">1</span><span style="font-size:20px;color:#F5402C">+</span>
+          </div>
+          <div style="flex:1;background:#F5402C;color:#fff;text-align:center;font-weight:700;font-size:15px;padding:14px;border-radius:999px;display:flex;justify-content:space-between;padding-left:22px;padding-right:22px"><span>Adicionar</span><span>R$ 37,90</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Product Mobile -->
+<div style="position:absolute;left:1340px;top:4180px;width:340px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;font:500 12px 'DM Sans',sans-serif;color:#A89A8A">Mobile · 360px</div>
+  <div data-screen-label="Produto Mobile" style="background:#fff;border-radius:30px;box-shadow:0 8px 30px rgba(0,0,0,.12);overflow:hidden;font-family:'DM Sans',sans-serif;border:8px solid #2A2320">
+    <div style="height:200px;background:#FFE3D6;position:relative">
+      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;color:rgba(0,0,0,.25)">foto do prato</div>
+      <div style="position:absolute;top:14px;left:14px;width:34px;height:34px;border-radius:999px;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;color:#2A2320">‹</div>
+    </div>
+    <div style="padding:18px 16px 8px">
+      <div style="font-family:'Fredoka';font-weight:600;font-size:21px;color:#2A2320">X-Tudo da Casa</div>
+      <div style="font-size:12.5px;color:#7A6E62;margin-top:6px;line-height:1.5">Pão brioche, 2 hambúrgueres 150g, cheddar, bacon, ovo, alface e tomate.</div>
+      <div style="font-family:'Fredoka';font-weight:600;font-size:18px;color:#2A2320;margin-top:12px">R$ 32,90</div>
+      <div style="margin-top:18px;display:flex;align-items:center;justify-content:space-between"><div style="font-weight:700;font-size:13.5px;color:#2A2320">Ponto da carne</div><div style="font-size:10px;color:#fff;background:#F5402C;padding:3px 8px;border-radius:999px;font-weight:600">Obrigatório</div></div>
+      <div style="margin-top:9px;display:flex;flex-direction:column;gap:8px">
+        <div style="display:flex;align-items:center;justify-content:space-between;border:1px solid #F0E9E1;border-radius:10px;padding:11px 13px"><span style="font-size:13px;color:#2A2320">Ao ponto</span><div style="width:18px;height:18px;border-radius:999px;border:5px solid #F5402C;box-shadow:inset 0 0 0 2px #fff"></div></div>
+        <div style="display:flex;align-items:center;justify-content:space-between;border:1px solid #F0E9E1;border-radius:10px;padding:11px 13px"><span style="font-size:13px;color:#2A2320">Bem passado</span><div style="width:18px;height:18px;border-radius:999px;border:2px solid #D9CEC0"></div></div>
+      </div>
+    </div>
+    <div style="padding:12px 16px 18px;border-top:1px solid #F0E9E1;display:flex;gap:12px;align-items:center">
+      <div style="display:flex;align-items:center;gap:14px;border:1px solid #E3D9CD;border-radius:999px;padding:9px 14px"><span style="font-size:18px;color:#A89A8A">−</span><span style="font-weight:700;color:#2A2320">1</span><span style="font-size:18px;color:#F5402C">+</span></div>
+      <div style="flex:1;background:#F5402C;color:#fff;text-align:center;font-weight:700;font-size:13.5px;padding:13px;border-radius:999px;display:flex;justify-content:space-between;padding-left:16px;padding-right:16px"><span>Adicionar</span><span>R$ 32,90</span></div>
+    </div>
+  </div>
+</div>
+<!-- ============ CART ============ -->
+<div data-drags-parent="0" style="position:absolute;left:80px;top:5520px;font:600 13px 'DM Sans',sans-serif;letter-spacing:.04em;color:#8A7B6B;text-transform:uppercase">04 · Carrinho / Sacola</div>
+
+<!-- Cart Desktop -->
+<div style="position:absolute;left:80px;top:5560px;width:1200px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;font:500 12px 'DM Sans',sans-serif;color:#A89A8A">Desktop · 1200px</div>
+  <div data-screen-label="Sacola Desktop" style="background:#FBF7F2;border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,.08);overflow:hidden;font-family:'DM Sans',sans-serif">
+    <div style="display:flex;align-items:center;gap:22px;padding:14px 30px;background:#fff;border-bottom:1px solid #F0E9E1">
+      <div style="font-family:'Fredoka';font-weight:600;font-size:23px;color:#2A2320">manda<span style="color:#F5402C">aí</span></div>
+      <div style="font-size:13px;color:#8A7B6B">‹ Continuar comprando</div>
+    </div>
+    <div style="padding:28px 30px 34px;display:flex;gap:24px;align-items:flex-start">
+      <div style="flex:1.6">
+        <div style="font-family:'Fredoka';font-weight:600;font-size:24px;color:#2A2320">Sua sacola</div>
+        <div style="font-size:13px;color:#8A7B6B;margin-top:2px;margin-bottom:18px">Tonho Lanches · entrega em ~30 min</div>
+        <div style="background:#fff;border:1px solid #F0E9E1;border-radius:16px;overflow:hidden">
+          <sc-for list="{{ cartItems }}" as="c" hint-placeholder-count="3">
+            <div style="display:flex;gap:16px;padding:18px;border-bottom:1px solid #F4EEE6;align-items:center">
+              <div style="width:60px;height:60px;border-radius:12px;background:{{ c.tint }};flex-shrink:0"></div>
+              <div style="flex:1">
+                <div style="font-family:'Fredoka';font-weight:600;font-size:16px;color:#2A2320">{{ c.name }}</div>
+                <div style="font-size:12.5px;color:#8A7B6B;margin-top:3px">{{ c.note }}</div>
+                <div style="font-size:12.5px;color:#F5402C;font-weight:600;margin-top:6px">Editar</div>
+              </div>
+              <div style="display:flex;align-items:center;gap:14px;border:1px solid #E3D9CD;border-radius:999px;padding:6px 13px"><span style="font-size:17px;color:#A89A8A">−</span><span style="font-weight:700;color:#2A2320">{{ c.qty }}</span><span style="font-size:17px;color:#F5402C">+</span></div>
+              <div style="font-family:'Fredoka';font-weight:600;font-size:15px;color:#2A2320;width:80px;text-align:right">{{ c.price }}</div>
+            </div>
+          </sc-for>
+          <div style="padding:16px 18px;display:flex;align-items:center;gap:10px;color:#F5402C;font-weight:600;font-size:14px">+ Adicionar mais itens</div>
+        </div>
+        <div style="margin-top:16px;background:#FFF8EC;border:1px solid #FCE6BD;border-radius:14px;padding:16px 18px;display:flex;align-items:center;gap:12px">
+          <div style="width:38px;height:38px;border-radius:10px;background:#FFC02E;display:flex;align-items:center;justify-content:center;font-size:18px">%</div>
+          <div style="flex:1"><div style="font-weight:700;font-size:13.5px;color:#2A2320">Cupom BAIRRO10 aplicado</div><div style="font-size:12px;color:#8A7B6B">−R$ 10,00 no seu pedido</div></div>
+          <div style="font-size:12.5px;color:#F5402C;font-weight:600">Remover</div>
+        </div>
+      </div>
+      <!-- summary -->
+      <div style="width:330px;flex-shrink:0;background:#fff;border:1px solid #F0E9E1;border-radius:16px;padding:22px">
+        <div style="font-family:'Fredoka';font-weight:600;font-size:18px;color:#2A2320;margin-bottom:16px">Resumo</div>
+        <div style="display:flex;justify-content:space-between;font-size:13.5px;color:#7A6E62;margin-bottom:11px"><span>Subtotal</span><span style="color:#2A2320">R$ 65,60</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:13.5px;color:#7A6E62;margin-bottom:11px"><span>Taxa de entrega</span><span style="color:#1FA463;font-weight:600">Grátis</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:13.5px;color:#7A6E62;margin-bottom:11px"><span>Taxa de serviço</span><span style="color:#2A2320">R$ 1,99</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:13.5px;color:#7A6E62;margin-bottom:14px"><span>Cupom BAIRRO10</span><span style="color:#1FA463;font-weight:600">−R$ 10,00</span></div>
+        <div style="border-top:1px dashed #E3D9CD;padding-top:14px;display:flex;justify-content:space-between;align-items:center"><span style="font-weight:700;color:#2A2320">Total</span><span style="font-family:'Fredoka';font-weight:600;font-size:22px;color:#2A2320">R$ 57,59</span></div>
+        <div style="margin-top:18px;background:#F5402C;color:#fff;text-align:center;font-weight:700;font-size:15px;padding:15px;border-radius:12px">Ir para o pagamento</div>
+        <div style="text-align:center;font-size:12px;color:#A89A8A;margin-top:12px">🔒 Pagamento seguro Mandaaí</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Cart Mobile -->
+<div style="position:absolute;left:1340px;top:5560px;width:340px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;font:500 12px 'DM Sans',sans-serif;color:#A89A8A">Mobile · 360px</div>
+  <div data-screen-label="Sacola Mobile" style="background:#FBF7F2;border-radius:30px;box-shadow:0 8px 30px rgba(0,0,0,.12);overflow:hidden;font-family:'DM Sans',sans-serif;border:8px solid #2A2320">
+    <div style="background:#fff;padding:16px;border-bottom:1px solid #F0E9E1;display:flex;align-items:center;gap:12px"><span style="color:#2A2320;font-size:18px">‹</span><div><div style="font-family:'Fredoka';font-weight:600;font-size:17px;color:#2A2320">Sua sacola</div><div style="font-size:11px;color:#8A7B6B">Tonho Lanches</div></div></div>
+    <div style="padding:14px 16px">
+      <div style="background:#fff;border:1px solid #F0E9E1;border-radius:14px;overflow:hidden">
+        <sc-for list="{{ cartItems }}" as="c" hint-placeholder-count="3">
+          <div style="display:flex;gap:12px;padding:13px;border-bottom:1px solid #F4EEE6;align-items:center">
+            <div style="width:46px;height:46px;border-radius:10px;background:{{ c.tint }};flex-shrink:0"></div>
+            <div style="flex:1"><div style="font-family:'Fredoka';font-weight:600;font-size:13.5px;color:#2A2320">{{ c.name }}</div><div style="font-size:12px;color:#2A2320;font-weight:600;margin-top:3px">{{ c.price }}</div></div>
+            <div style="display:flex;align-items:center;gap:11px;border:1px solid #E3D9CD;border-radius:999px;padding:5px 11px"><span style="font-size:15px;color:#A89A8A">−</span><span style="font-weight:700;color:#2A2320;font-size:13px">{{ c.qty }}</span><span style="font-size:15px;color:#F5402C">+</span></div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="margin-top:12px;background:#FFF8EC;border:1px solid #FCE6BD;border-radius:12px;padding:12px;display:flex;align-items:center;gap:10px"><div style="width:30px;height:30px;border-radius:8px;background:#FFC02E;display:flex;align-items:center;justify-content:center">%</div><div style="flex:1;font-size:12px;font-weight:600;color:#2A2320">Cupom BAIRRO10 · −R$ 10,00</div></div>
+      <div style="margin-top:14px;padding:0 2px">
+        <div style="display:flex;justify-content:space-between;font-size:12.5px;color:#7A6E62;margin-bottom:8px"><span>Subtotal</span><span style="color:#2A2320">R$ 65,60</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:12.5px;color:#7A6E62;margin-bottom:8px"><span>Entrega</span><span style="color:#1FA463;font-weight:600">Grátis</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:12.5px;color:#7A6E62"><span>Cupom</span><span style="color:#1FA463;font-weight:600">−R$ 10,00</span></div>
+      </div>
+    </div>
+    <div style="padding:14px 16px 18px;background:#fff;border-top:1px solid #F0E9E1">
+      <div style="background:#F5402C;color:#fff;font-weight:700;font-size:14px;padding:14px 18px;border-radius:12px;display:flex;justify-content:space-between"><span>Ir para o pagamento</span><span>R$ 57,59</span></div>
+    </div>
+  </div>
+</div>
+<!-- ============ CHECKOUT ============ -->
+<div data-drags-parent="0" style="position:absolute;left:80px;top:6900px;font:600 13px 'DM Sans',sans-serif;letter-spacing:.04em;color:#8A7B6B;text-transform:uppercase">05 · Checkout / Pagamento</div>
+
+<!-- Checkout Desktop -->
+<div style="position:absolute;left:80px;top:6940px;width:1200px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;font:500 12px 'DM Sans',sans-serif;color:#A89A8A">Desktop · 1200px</div>
+  <div data-screen-label="Checkout Desktop" style="background:#FBF7F2;border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,.08);overflow:hidden;font-family:'DM Sans',sans-serif">
+    <div style="display:flex;align-items:center;gap:22px;padding:14px 30px;background:#fff;border-bottom:1px solid #F0E9E1">
+      <div style="font-family:'Fredoka';font-weight:600;font-size:23px;color:#2A2320">manda<span style="color:#F5402C">aí</span></div>
+      <div style="font-size:13px;color:#8A7B6B">‹ Voltar para a sacola</div>
+    </div>
+    <div style="padding:28px 30px 34px;display:flex;gap:24px;align-items:flex-start">
+      <div style="flex:1.6;display:flex;flex-direction:column;gap:16px">
+        <div style="font-family:'Fredoka';font-weight:600;font-size:24px;color:#2A2320">Finalizar pedido</div>
+        <!-- address -->
+        <div style="background:#fff;border:1px solid #F0E9E1;border-radius:16px;padding:20px">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px"><div style="font-weight:700;font-size:15px;color:#2A2320">Endereço de entrega</div><div style="font-size:12.5px;color:#F5402C;font-weight:600">Trocar</div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start"><div style="width:36px;height:36px;border-radius:10px;background:#FFE3D6;display:flex;align-items:center;justify-content:center;color:#F5402C">⌂</div><div><div style="font-size:13.5px;font-weight:600;color:#2A2320">Casa · Rua das Palmeiras, 240</div><div style="font-size:12.5px;color:#8A7B6B;margin-top:2px">Apto 52 · Jardim Aurora · Ref: portão verde</div></div></div>
+        </div>
+        <!-- delivery time -->
+        <div style="background:#fff;border:1px solid #F0E9E1;border-radius:16px;padding:20px">
+          <div style="font-weight:700;font-size:15px;color:#2A2320;margin-bottom:12px">Entrega</div>
+          <div style="display:flex;gap:12px">
+            <div style="flex:1;border:1.5px solid #F5402C;background:#FCEEEA;border-radius:12px;padding:14px"><div style="font-weight:700;font-size:13.5px;color:#2A2320">Padrão</div><div style="font-size:12.5px;color:#7A6E62;margin-top:3px">25–35 min · Grátis</div></div>
+            <div style="flex:1;border:1px solid #F0E9E1;border-radius:12px;padding:14px"><div style="font-weight:700;font-size:13.5px;color:#2A2320">Agendar</div><div style="font-size:12.5px;color:#7A6E62;margin-top:3px">Escolher horário</div></div>
+          </div>
+        </div>
+        <!-- payment -->
+        <div style="background:#fff;border:1px solid #F0E9E1;border-radius:16px;padding:20px">
+          <div style="font-weight:700;font-size:15px;color:#2A2320;margin-bottom:12px">Forma de pagamento</div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <div style="display:flex;align-items:center;gap:12px;border:1.5px solid #F5402C;background:#FCEEEA;border-radius:11px;padding:13px 15px"><div style="width:36px;height:24px;border-radius:5px;background:#1FA463;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:700">PIX</div><div style="flex:1;font-size:13.5px;font-weight:600;color:#2A2320">Pix · aprovação na hora</div><div style="width:18px;height:18px;border-radius:999px;border:5px solid #F5402C;box-shadow:inset 0 0 0 2px #fff"></div></div>
+            <div style="display:flex;align-items:center;gap:12px;border:1px solid #F0E9E1;border-radius:11px;padding:13px 15px"><div style="width:36px;height:24px;border-radius:5px;background:#2A2320;color:#fff;display:flex;align-items:center;justify-content:center;font-size:10px">▭</div><div style="flex:1;font-size:13.5px;font-weight:600;color:#2A2320">Cartão de crédito •••• 4821</div><div style="width:18px;height:18px;border-radius:999px;border:2px solid #D9CEC0"></div></div>
+            <div style="display:flex;align-items:center;gap:12px;border:1px solid #F0E9E1;border-radius:11px;padding:13px 15px"><div style="width:36px;height:24px;border-radius:5px;background:#FFC02E;display:flex;align-items:center;justify-content:center;color:#7A4A00;font-size:13px">$</div><div style="flex:1;font-size:13.5px;font-weight:600;color:#2A2320">Dinheiro na entrega</div><div style="width:18px;height:18px;border-radius:999px;border:2px solid #D9CEC0"></div></div>
+          </div>
+        </div>
+      </div>
+      <!-- summary -->
+      <div style="width:330px;flex-shrink:0;background:#fff;border:1px solid #F0E9E1;border-radius:16px;padding:22px;position:sticky;top:20px">
+        <div style="font-family:'Fredoka';font-weight:600;font-size:18px;color:#2A2320;margin-bottom:14px">Seu pedido</div>
+        <div style="font-size:12.5px;color:#7A6E62;margin-bottom:14px;line-height:1.7">1× X-Tudo da Casa<br>1× Batata Rústica<br>2× Guaraná lata 350ml</div>
+        <div style="border-top:1px solid #F0E9E1;padding-top:14px">
+          <div style="display:flex;justify-content:space-between;font-size:13.5px;color:#7A6E62;margin-bottom:10px"><span>Subtotal</span><span style="color:#2A2320">R$ 65,60</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:13.5px;color:#7A6E62;margin-bottom:10px"><span>Entrega</span><span style="color:#1FA463;font-weight:600">Grátis</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:13.5px;color:#7A6E62;margin-bottom:10px"><span>Serviço</span><span style="color:#2A2320">R$ 1,99</span></div>
+          <div style="display:flex;justify-content:space-between;font-size:13.5px;color:#7A6E62"><span>Cupom</span><span style="color:#1FA463;font-weight:600">−R$ 10,00</span></div>
+        </div>
+        <div style="border-top:1px dashed #E3D9CD;margin-top:14px;padding-top:14px;display:flex;justify-content:space-between;align-items:center"><span style="font-weight:700;color:#2A2320">Total</span><span style="font-family:'Fredoka';font-weight:600;font-size:22px;color:#2A2320">R$ 57,59</span></div>
+        <div style="margin-top:18px;background:#F5402C;color:#fff;text-align:center;font-weight:700;font-size:15px;padding:15px;border-radius:12px">Confirmar pedido</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Checkout Mobile -->
+<div style="position:absolute;left:1340px;top:6940px;width:340px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;font:500 12px 'DM Sans',sans-serif;color:#A89A8A">Mobile · 360px</div>
+  <div data-screen-label="Checkout Mobile" style="background:#FBF7F2;border-radius:30px;box-shadow:0 8px 30px rgba(0,0,0,.12);overflow:hidden;font-family:'DM Sans',sans-serif;border:8px solid #2A2320">
+    <div style="background:#fff;padding:16px;border-bottom:1px solid #F0E9E1;display:flex;align-items:center;gap:12px"><span style="color:#2A2320;font-size:18px">‹</span><div style="font-family:'Fredoka';font-weight:600;font-size:17px;color:#2A2320">Finalizar pedido</div></div>
+    <div style="padding:14px 16px;display:flex;flex-direction:column;gap:12px">
+      <div style="background:#fff;border:1px solid #F0E9E1;border-radius:14px;padding:14px;display:flex;gap:11px;align-items:flex-start"><div style="width:32px;height:32px;border-radius:9px;background:#FFE3D6;display:flex;align-items:center;justify-content:center;color:#F5402C">⌂</div><div style="flex:1"><div style="font-size:12.5px;font-weight:700;color:#2A2320">Casa · Rua das Palmeiras, 240</div><div style="font-size:11.5px;color:#8A7B6B;margin-top:2px">Apto 52 · Jardim Aurora</div></div><div style="font-size:11.5px;color:#F5402C;font-weight:600">Trocar</div></div>
+      <div style="background:#fff;border:1px solid #F0E9E1;border-radius:14px;padding:14px"><div style="font-weight:700;font-size:13px;color:#2A2320;margin-bottom:9px">Pagamento</div>
+        <div style="display:flex;align-items:center;gap:10px;border:1.5px solid #F5402C;background:#FCEEEA;border-radius:10px;padding:11px 12px;margin-bottom:8px"><div style="width:32px;height:21px;border-radius:5px;background:#1FA463;display:flex;align-items:center;justify-content:center;color:#fff;font-size:9px;font-weight:700">PIX</div><div style="flex:1;font-size:12.5px;font-weight:600;color:#2A2320">Pix · na hora</div><div style="width:16px;height:16px;border-radius:999px;border:5px solid #F5402C;box-shadow:inset 0 0 0 1px #fff"></div></div>
+        <div style="display:flex;align-items:center;gap:10px;border:1px solid #F0E9E1;border-radius:10px;padding:11px 12px"><div style="width:32px;height:21px;border-radius:5px;background:#2A2320;color:#fff;display:flex;align-items:center;justify-content:center;font-size:9px">▭</div><div style="flex:1;font-size:12.5px;font-weight:600;color:#2A2320">Cartão •••• 4821</div><div style="width:16px;height:16px;border-radius:999px;border:2px solid #D9CEC0"></div></div>
+      </div>
+      <div style="background:#fff;border:1px solid #F0E9E1;border-radius:14px;padding:14px">
+        <div style="display:flex;justify-content:space-between;font-size:12.5px;color:#7A6E62;margin-bottom:8px"><span>Subtotal</span><span style="color:#2A2320">R$ 65,60</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:12.5px;color:#7A6E62;margin-bottom:8px"><span>Entrega</span><span style="color:#1FA463;font-weight:600">Grátis</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:12.5px;color:#7A6E62;margin-bottom:10px"><span>Cupom</span><span style="color:#1FA463;font-weight:600">−R$ 10,00</span></div>
+        <div style="border-top:1px dashed #E3D9CD;padding-top:10px;display:flex;justify-content:space-between;align-items:center"><span style="font-weight:700;color:#2A2320;font-size:13px">Total</span><span style="font-family:'Fredoka';font-weight:600;font-size:18px;color:#2A2320">R$ 57,59</span></div>
+      </div>
+    </div>
+    <div style="padding:12px 16px 18px;background:#fff;border-top:1px solid #F0E9E1"><div style="background:#F5402C;color:#fff;text-align:center;font-weight:700;font-size:14px;padding:14px;border-radius:12px">Confirmar pedido · R$ 57,59</div></div>
+  </div>
+</div>
+<!-- ============ ORDER TRACKING ============ -->
+<div data-drags-parent="0" style="position:absolute;left:80px;top:8520px;font:600 13px 'DM Sans',sans-serif;letter-spacing:.04em;color:#8A7B6B;text-transform:uppercase">06 · Acompanhamento do pedido</div>
+
+<!-- Tracking Desktop -->
+<div style="position:absolute;left:80px;top:8560px;width:1200px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;font:500 12px 'DM Sans',sans-serif;color:#A89A8A">Desktop · 1200px</div>
+  <div data-screen-label="Acompanhamento Desktop" style="background:#FBF7F2;border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,.08);overflow:hidden;font-family:'DM Sans',sans-serif">
+    <div style="display:flex;align-items:center;gap:22px;padding:14px 30px;background:#fff;border-bottom:1px solid #F0E9E1">
+      <div style="font-family:'Fredoka';font-weight:600;font-size:23px;color:#2A2320">manda<span style="color:#F5402C">aí</span></div>
+      <div style="font-size:13px;color:#8A7B6B">Pedido #4821 · Tonho Lanches</div>
+    </div>
+    <div style="display:flex;gap:0;align-items:stretch">
+      <!-- map -->
+      <div style="flex:1.4;min-height:480px;background:linear-gradient(135deg,#E7F0DD 0%,#DDEAD0 100%);position:relative">
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:monospace;font-size:11px;color:rgba(0,0,0,.25)">mapa em tempo real</div>
+        <div style="position:absolute;left:30%;top:42%;width:18px;height:18px;border-radius:999px;background:#1FA463;border:4px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.2)"></div>
+        <div style="position:absolute;left:64%;top:64%;width:18px;height:18px;border-radius:999px;background:#F5402C;border:4px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.2)"></div>
+        <svg style="position:absolute;inset:0;width:100%;height:100%" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M30 44 Q 48 40 64 64" stroke="#F5402C" stroke-width="0.8" fill="none" stroke-dasharray="2 2"/></svg>
+      </div>
+      <!-- status -->
+      <div style="width:420px;flex-shrink:0;padding:28px 30px;background:#fff">
+        <div style="background:#F1F8F0;border:1px solid #CDE8D3;border-radius:14px;padding:16px;margin-bottom:22px">
+          <div style="font-size:12.5px;color:#1FA463;font-weight:700;letter-spacing:.02em">CHEGA EM ~15 MIN</div>
+          <div style="font-family:'Fredoka';font-weight:600;font-size:22px;color:#2A2320;margin-top:4px">Seu pedido saiu pra entrega 🛵</div>
+        </div>
+        <sc-for list="{{ trackSteps }}" as="s" hint-placeholder-count="4">
+          <div style="display:flex;gap:14px;align-items:flex-start;margin-bottom:4px">
+            <div style="display:flex;flex-direction:column;align-items:center;align-self:stretch">
+              <sc-if value="{{ s.done }}" hint-placeholder-val="{{ true }}"><div style="width:26px;height:26px;border-radius:999px;background:#1FA463;color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px">✓</div></sc-if>
+              <sc-if value="{{ s.pending }}" hint-placeholder-val="{{ true }}"><div style="width:26px;height:26px;border-radius:999px;border:2px solid #E3D9CD;background:#fff"></div></sc-if>
+              <div style="width:2px;flex:1;min-height:26px;background:#EFE7DD"></div>
+            </div>
+            <div style="padding-bottom:18px">
+              <div style="font-weight:700;font-size:14.5px;color:{{ s.color }}">{{ s.label }}</div>
+              <div style="font-size:12.5px;color:#A89A8A;margin-top:2px">{{ s.time }}</div>
+            </div>
+          </div>
+        </sc-for>
+        <div style="margin-top:8px;border:1px solid #F0E9E1;border-radius:14px;padding:16px;display:flex;align-items:center;gap:14px">
+          <div style="width:48px;height:48px;border-radius:999px;background:#FFE3D6;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;color:#F5402C;font-size:18px">C</div>
+          <div style="flex:1"><div style="font-weight:700;font-size:14px;color:#2A2320">Carlos · entregador</div><div style="font-size:12px;color:#8A7B6B">Honda CG · ABC-1D23</div></div>
+          <div style="width:40px;height:40px;border-radius:999px;background:#1FA463;color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px">☎</div>
+          <div style="width:40px;height:40px;border-radius:999px;background:#F5402C;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px">✉</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tracking Mobile -->
+<div style="position:absolute;left:1340px;top:8560px;width:340px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;font:500 12px 'DM Sans',sans-serif;color:#A89A8A">Mobile · 360px</div>
+  <div data-screen-label="Acompanhamento Mobile" style="background:#fff;border-radius:30px;box-shadow:0 8px 30px rgba(0,0,0,.12);overflow:hidden;font-family:'DM Sans',sans-serif;border:8px solid #2A2320">
+    <div style="height:200px;background:linear-gradient(135deg,#E7F0DD,#DDEAD0);position:relative">
+      <div style="position:absolute;top:14px;left:14px;width:34px;height:34px;border-radius:999px;background:rgba(255,255,255,.92);display:flex;align-items:center;justify-content:center;color:#2A2320">‹</div>
+      <div style="position:absolute;left:28%;top:46%;width:14px;height:14px;border-radius:999px;background:#1FA463;border:3px solid #fff"></div>
+      <div style="position:absolute;left:66%;top:66%;width:14px;height:14px;border-radius:999px;background:#F5402C;border:3px solid #fff"></div>
+    </div>
+    <div style="padding:16px">
+      <div style="background:#F1F8F0;border:1px solid #CDE8D3;border-radius:14px;padding:14px"><div style="font-size:11px;color:#1FA463;font-weight:700">CHEGA EM ~15 MIN</div><div style="font-family:'Fredoka';font-weight:600;font-size:18px;color:#2A2320;margin-top:3px">Saiu pra entrega 🛵</div></div>
+      <div style="margin-top:14px">
+        <sc-for list="{{ trackSteps }}" as="s" hint-placeholder-count="4">
+          <div style="display:flex;gap:12px;align-items:flex-start;margin-bottom:2px">
+            <div style="display:flex;flex-direction:column;align-items:center;align-self:stretch">
+              <sc-if value="{{ s.done }}" hint-placeholder-val="{{ true }}"><div style="width:22px;height:22px;border-radius:999px;background:#1FA463;color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px">✓</div></sc-if>
+              <sc-if value="{{ s.pending }}" hint-placeholder-val="{{ true }}"><div style="width:22px;height:22px;border-radius:999px;border:2px solid #E3D9CD;background:#fff"></div></sc-if>
+              <div style="width:2px;flex:1;min-height:18px;background:#EFE7DD"></div>
+            </div>
+            <div style="padding-bottom:14px"><div style="font-weight:700;font-size:13px;color:{{ s.color }}">{{ s.label }}</div><div style="font-size:11px;color:#A89A8A">{{ s.time }}</div></div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="padding:0 16px 18px"><div style="border:1px solid #F0E9E1;border-radius:14px;padding:13px;display:flex;align-items:center;gap:11px"><div style="width:40px;height:40px;border-radius:999px;background:#FFE3D6;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;color:#F5402C">C</div><div style="flex:1"><div style="font-weight:700;font-size:13px;color:#2A2320">Carlos · entregador</div><div style="font-size:11px;color:#8A7B6B">Honda CG · ABC-1D23</div></div><div style="width:34px;height:34px;border-radius:999px;background:#1FA463;color:#fff;display:flex;align-items:center;justify-content:center">☎</div></div></div>
+  </div>
+</div>
+
+<!-- ============ LOGIN ============ -->
+<div data-drags-parent="0" style="position:absolute;left:80px;top:9620px;font:600 13px 'DM Sans',sans-serif;letter-spacing:.04em;color:#8A7B6B;text-transform:uppercase">07 · Login / Cadastro</div>
+
+<!-- Login Desktop -->
+<div style="position:absolute;left:80px;top:9660px;width:1200px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;font:500 12px 'DM Sans',sans-serif;color:#A89A8A">Desktop · 1200px</div>
+  <div data-screen-label="Login Desktop" style="background:#fff;border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,.08);overflow:hidden;font-family:'DM Sans',sans-serif;display:flex;min-height:520px">
+    <!-- brand panel -->
+    <div style="flex:1.1;background:linear-gradient(150deg,#F5402C,#FF7A3D);padding:48px;color:#fff;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden">
+      <div style="width:64px;height:64px;border-radius:18px;background:#fff;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:700;font-size:34px;color:#F5402C">m</div>
+      <div style="font-family:'Fredoka';font-weight:600;font-size:38px;margin-top:24px;line-height:1.1;max-width:340px">Comida boa do seu bairro, num clique.</div>
+      <div style="font-size:14.5px;opacity:.92;margin-top:14px;max-width:330px;line-height:1.5">Entre pra acompanhar pedidos, salvar endereços e aproveitar cupons do Clube Mandaaí.</div>
+      <div style="position:absolute;right:-50px;bottom:-50px;width:240px;height:240px;border-radius:999px;background:rgba(255,255,255,.1)"></div>
+    </div>
+    <!-- form -->
+    <div style="flex:1;padding:48px 56px;display:flex;flex-direction:column;justify-content:center">
+      <div style="font-family:'Fredoka';font-weight:600;font-size:26px;color:#2A2320">Entrar ou criar conta</div>
+      <div style="font-size:13.5px;color:#8A7B6B;margin-top:6px">É rápido — só precisamos do seu celular.</div>
+      <div style="margin-top:26px;font-size:12.5px;font-weight:600;color:#4A4138">Celular</div>
+      <div style="display:flex;align-items:center;gap:10px;border:1.5px solid #E3D9CD;border-radius:12px;padding:14px 16px;margin-top:8px"><span style="font-size:14px;color:#2A2320;font-weight:600">🇧🇷 +55</span><span style="color:#A89A8A;font-size:14px">(11) 9 0000-0000</span></div>
+      <div style="margin-top:18px;background:#F5402C;color:#fff;text-align:center;font-weight:700;font-size:15px;padding:15px;border-radius:12px">Continuar</div>
+      <div style="display:flex;align-items:center;gap:12px;margin:22px 0"><div style="flex:1;height:1px;background:#EFE7DD"></div><span style="font-size:12px;color:#A89A8A">ou</span><div style="flex:1;height:1px;background:#EFE7DD"></div></div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="border:1.5px solid #E3D9CD;border-radius:12px;padding:13px;text-align:center;font-size:13.5px;font-weight:600;color:#2A2320">Continuar com Google</div>
+        <div style="border:1.5px solid #E3D9CD;border-radius:12px;padding:13px;text-align:center;font-size:13.5px;font-weight:600;color:#2A2320">Continuar com Apple</div>
+      </div>
+      <div style="font-size:11.5px;color:#A89A8A;margin-top:22px;line-height:1.5;text-align:center">Ao continuar, você concorda com os <span style="color:#F5402C;font-weight:600">Termos</span> e a <span style="color:#F5402C;font-weight:600">Política de Privacidade</span>.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Login Mobile -->
+<div style="position:absolute;left:1340px;top:9660px;width:340px">
+  <div data-drags-parent="1" style="position:absolute;top:-26px;font:500 12px 'DM Sans',sans-serif;color:#A89A8A">Mobile · 360px</div>
+  <div data-screen-label="Login Mobile" style="background:#fff;border-radius:30px;box-shadow:0 8px 30px rgba(0,0,0,.12);overflow:hidden;font-family:'DM Sans',sans-serif;border:8px solid #2A2320">
+    <div style="background:linear-gradient(150deg,#F5402C,#FF7A3D);padding:34px 22px 30px;color:#fff">
+      <div style="width:54px;height:54px;border-radius:16px;background:#fff;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:700;font-size:28px;color:#F5402C">m</div>
+      <div style="font-family:'Fredoka';font-weight:600;font-size:24px;margin-top:18px;line-height:1.15">Comida boa do seu bairro, num clique.</div>
+    </div>
+    <div style="padding:24px 20px 28px">
+      <div style="font-family:'Fredoka';font-weight:600;font-size:20px;color:#2A2320">Entrar ou criar conta</div>
+      <div style="font-size:12.5px;color:#8A7B6B;margin-top:5px">Só precisamos do seu celular.</div>
+      <div style="margin-top:20px;font-size:12px;font-weight:600;color:#4A4138">Celular</div>
+      <div style="display:flex;align-items:center;gap:9px;border:1.5px solid #E3D9CD;border-radius:12px;padding:13px 14px;margin-top:7px"><span style="font-size:13.5px;color:#2A2320;font-weight:600">🇧🇷 +55</span><span style="color:#A89A8A;font-size:13.5px">(11) 9 0000-0000</span></div>
+      <div style="margin-top:16px;background:#F5402C;color:#fff;text-align:center;font-weight:700;font-size:14.5px;padding:14px;border-radius:12px">Continuar</div>
+      <div style="display:flex;align-items:center;gap:10px;margin:18px 0"><div style="flex:1;height:1px;background:#EFE7DD"></div><span style="font-size:11.5px;color:#A89A8A">ou</span><div style="flex:1;height:1px;background:#EFE7DD"></div></div>
+      <div style="display:flex;flex-direction:column;gap:9px">
+        <div style="border:1.5px solid #E3D9CD;border-radius:12px;padding:12px;text-align:center;font-size:13px;font-weight:600;color:#2A2320">Continuar com Google</div>
+        <div style="border:1.5px solid #E3D9CD;border-radius:12px;padding:12px;text-align:center;font-size:13px;font-weight:600;color:#2A2320">Continuar com Apple</div>
+      </div>
+    </div>
+  </div>
+</div></x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const categories = [
+      {label:'Lanches', ini:'L', bg:'#FFE3D6', fg:'#F5402C'},
+      {label:'Pizza', ini:'P', bg:'#FFEFC9', fg:'#C9971A'},
+      {label:'Japonesa', ini:'J', bg:'#E6ECF5', fg:'#3E6DB5'},
+      {label:'Brasileira', ini:'B', bg:'#E7F0DD', fg:'#1FA463'},
+      {label:'Açaí', ini:'A', bg:'#F3E6F5', fg:'#9B4D93'},
+      {label:'Doces', ini:'D', bg:'#FCE0DE', fg:'#D7506B'},
+      {label:'Saudável', ini:'S', bg:'#E0EFEC', fg:'#1F8A7A'},
+      {label:'Bebidas', ini:'B', bg:'#FFE8D2', fg:'#E07A2E'},
+      {label:'Pastel', ini:'P', bg:'#FFF1C2', fg:'#C9971A'},
+    ];
+    const restaurants = [
+      {name:'Tonho Lanches', cat:'Hambúrguer • Lanches', rating:'4,8', time:'25–35 min', fee:'Grátis', tag:'Promo −30%', tint:'#FFE3D6', imglabel:'foto da loja'},
+      {name:'Dona Pizza', cat:'Pizza • Italiana', rating:'4,7', time:'30–40 min', fee:'R$ 5,99', tag:'Novo', tint:'#FFEFC9', imglabel:'foto da loja'},
+      {name:'Sushi do Bairro', cat:'Japonesa • Sushi', rating:'4,9', time:'35–45 min', fee:'Grátis', tag:'Top', tint:'#E6ECF5', imglabel:'foto da loja'},
+      {name:'Tempero da Vó', cat:'Brasileira • Marmita', rating:'4,8', time:'20–30 min', fee:'Grátis', tag:'Promo', tint:'#E7F0DD', imglabel:'foto da loja'},
+      {name:'Açaí da Praça', cat:'Açaí • Sobremesas', rating:'4,6', time:'15–25 min', fee:'R$ 3,99', tag:'−20%', tint:'#F3E6F5', imglabel:'foto da loja'},
+      {name:'Pastelaria 25', cat:'Pastel • Salgados', rating:'4,5', time:'20–30 min', fee:'Grátis', tag:'Promo', tint:'#FFE8D2', imglabel:'foto da loja'},
+    ];
+    const menuPopulares = [
+      {name:'X-Tudo da Casa', desc:'Pão brioche, 2 hambúrgueres 150g, cheddar, bacon, ovo, alface e tomate.', price:'R$ 32,90', tint:'#FFE3D6'},
+      {name:'X-Salada Clássico', desc:'Hambúrguer 180g, queijo prato, alface, tomate e maionese da casa.', price:'R$ 26,90', tint:'#FFEFC9'},
+      {name:'Combo Tonho', desc:'X-Tudo + batata rústica + refri lata. Pra matar a fome de vez.', price:'R$ 41,90', tint:'#E7F0DD'},
+    ];
+    const menuAcomp = [
+      {name:'Batata Rústica', desc:'Porção 300g com alecrim e maionese verde.', price:'R$ 18,90', tint:'#FFEFC9'},
+      {name:'Onion Rings', desc:'8 anéis de cebola empanados crocantes.', price:'R$ 16,90', tint:'#FFE8D2'},
+    ];
+    const cartItems = [
+      {name:'X-Tudo da Casa', qty:'1', price:'R$ 32,90', tint:'#FFE3D6', note:'Sem cebola, ponto da carne ao ponto'},
+      {name:'Batata Rústica', qty:'1', price:'R$ 18,90', tint:'#FFEFC9', note:'Maionese verde à parte'},
+      {name:'Guaraná lata 350ml', qty:'2', price:'R$ 13,80', tint:'#E7F0DD', note:''},
+    ];
+    const trackSteps = [
+      {label:'Pedido confirmado', time:'19:42', done:true, pending:false, color:'#2A2320'},
+      {label:'Em preparo na cozinha', time:'19:48', done:true, pending:false, color:'#2A2320'},
+      {label:'Saiu para entrega', time:'20:05', done:true, pending:false, color:'#1FA463'},
+      {label:'Chegou! Bom apetite', time:'previsto ~20:20', done:false, pending:true, color:'#A89A8A'},
+    ];
+    return {
+      categories,
+      restaurants,
+      catsMobile: categories.slice(0,5),
+      restaurantsMobile: restaurants.slice(0,3),
+      menuPopulares, menuAcomp, cartItems, trackSteps,
+    };
+  }
+}
+</script>
+</body>
+</html>
